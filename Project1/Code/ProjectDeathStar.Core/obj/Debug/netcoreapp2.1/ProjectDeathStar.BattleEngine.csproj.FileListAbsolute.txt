@@ -1,0 +1,9 @@
+H:\DEVSKILL\Solution1\ProjectDeathStar.BattleEngine\bin\Debug\netcoreapp2.1\ProjectDeathStar.BattleEngine.deps.json
+H:\DEVSKILL\Solution1\ProjectDeathStar.BattleEngine\bin\Debug\netcoreapp2.1\ProjectDeathStar.BattleEngine.dll
+H:\DEVSKILL\Solution1\ProjectDeathStar.BattleEngine\bin\Debug\netcoreapp2.1\ProjectDeathStar.BattleEngine.pdb
+H:\DEVSKILL\Solution1\ProjectDeathStar.BattleEngine\obj\Debug\netcoreapp2.1\ProjectDeathStar.BattleEngine.csproj.CoreCompileInputs.cache
+H:\DEVSKILL\Solution1\ProjectDeathStar.BattleEngine\obj\Debug\netcoreapp2.1\ProjectDeathStar.BattleEngine.AssemblyInfoInputs.cache
+H:\DEVSKILL\Solution1\ProjectDeathStar.BattleEngine\obj\Debug\netcoreapp2.1\ProjectDeathStar.BattleEngine.AssemblyInfo.cs
+H:\DEVSKILL\Solution1\ProjectDeathStar.BattleEngine\obj\Debug\netcoreapp2.1\ProjectDeathStar.BattleEngine.dll
+H:\DEVSKILL\Solution1\ProjectDeathStar.BattleEngine\obj\Debug\netcoreapp2.1\ProjectDeathStar.BattleEngine.pdb
+H:\DEVSKILL\Solution1\ProjectDeathStar.BattleEngine\obj\Debug\netcoreapp2.1\ProjectDeathStar.BattleEngine.csprojAssemblyReference.cache

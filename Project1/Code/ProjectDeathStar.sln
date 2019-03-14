@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectDeathStar.Core", "ProjectDeathStar.Core\ProjectDeathStar.Core.csproj", "{DD36138D-ABE8-45CC-B14E-AF830A92376A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectDeathStar.Core.Tests", "ProjectDeathStar.Core.Tests\ProjectDeathStar.Core.Tests.csproj", "{30B1E3D4-C266-4636-BB36-05CCBF22C9D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD36138D-ABE8-45CC-B14E-AF830A92376A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD36138D-ABE8-45CC-B14E-AF830A92376A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD36138D-ABE8-45CC-B14E-AF830A92376A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD36138D-ABE8-45CC-B14E-AF830A92376A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30B1E3D4-C266-4636-BB36-05CCBF22C9D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30B1E3D4-C266-4636-BB36-05CCBF22C9D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30B1E3D4-C266-4636-BB36-05CCBF22C9D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30B1E3D4-C266-4636-BB36-05CCBF22C9D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2344B7E-DE64-4102-9706-95C5E21A6EDC}
+	EndGlobalSection
+EndGlobal
