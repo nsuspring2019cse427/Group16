@@ -1,17 +1,18 @@
+using Autofac;
 using Autofac.Extras.Moq;
 using DeathStar.Core.Models.Equipments;
 using DeathStar.Core.Models.Ships;
 using NUnit.Framework;
 using System;
 
-namespace ShipTests.BattleshipTests
+namespace ShipTests
 {
-    public class InstanceTests
+    public class BattleshipTests
         : ShipTestBase<Battleship>
     {
         [SetUp]
         public void Setup()
-            => SetupFactory();
+            => SetupShipFactory();
 
         [Test]
         public void CreateBattleShip_CreateRaven_ReturnsCorrectInstance()
@@ -125,30 +126,431 @@ namespace ShipTests.BattleshipTests
         }
 
         [Test]
-        public void InstallWeapon_setWeaponInSlot_setsWeaponInCorrectSlot()
+        public void InstallLargeCannon_InstallInRaven_SetsWeaponInCorrectSlot()
         {
             using (var mock = AutoMock.GetLoose())
             {
                 //Arrange
-                //var weapon = mock.Mock<IWeapon>();
-                //weapon.Setup(a => a.Damage).Returns(500);
-                //var ship = mock.Create<Raven>();
 
-                var factory = new ShipFactory<Battleship>();
-                var raven = factory.CreateShip(Battleships.Raven);
-                var cannon = new Weapon(Weapons.Cannon, WeaponGrades.Large);
+                var param = new NamedParameter[2] {
+                    new NamedParameter("weapons", Weapons.Cannon),
+                    new NamedParameter("weaponGrades", WeaponGrades.Large)
+                };
+
+                var ship = _Factory.CreateShip(Battleships.Dominix);
+                var weapon = mock.Create<Weapon>(param);
 
                 //Act
-                raven.InstallWeapon(cannon, 3);
-
-                //ship.Weapons = new List<IWeapon>() { weapon.Object, weapon.Object };
-
-                //var damage = ship.FireWeapon();
+                ship.InstallWeapon(weapon, 3);
 
                 //weapon.VerifyAll();
 
                 //Assert
-                Assert.Contains(cannon, raven.Weapons);
+                Assert.Contains(weapon, ship.Weapons);
+                Assert.IsTrue(weapon.Equals(ship.Weapons[2]));
+            }
+        }
+
+        [Test]
+        public void InstallLargeCannon_InstallInDominix_SetsWeaponInCorrectSlot()
+        {
+            using (var mock = AutoMock.GetLoose())
+            {
+                //Arrange
+
+                var param = new NamedParameter[2] {
+                    new NamedParameter("weapons", Weapons.Cannon),
+                    new NamedParameter("weaponGrades", WeaponGrades.Large)
+                };
+
+                var ship = _Factory.CreateShip(Battleships.Dominix);
+                var weapon = mock.Create<Weapon>(param);
+
+
+                //Act
+                ship.InstallWeapon(weapon, 3);
+
+                //weapon.VerifyAll();
+
+                //Assert
+                Assert.Contains(weapon, ship.Weapons);
+                Assert.IsTrue(weapon.Equals(ship.Weapons[2]));
+            }
+        }
+
+        [Test]
+        public void InstallLargeCannon_InstallInScorpion_SetsWeaponInCorrectSlot()
+        {
+            using (var mock = AutoMock.GetLoose())
+            {
+                //Arrange
+
+                var param = new NamedParameter[2] {
+                    new NamedParameter("weapons", Weapons.Cannon),
+                    new NamedParameter("weaponGrades", WeaponGrades.Large)
+                };
+
+                var ship = _Factory.CreateShip(Battleships.Scorpion);
+                var weapon = mock.Create<Weapon>(param);
+
+                //Act
+                ship.InstallWeapon(weapon, 3);
+
+                //weapon.VerifyAll();
+
+                //Assert
+                Assert.Contains(weapon, ship.Weapons);
+                Assert.IsTrue(weapon.Equals(ship.Weapons[2]));
+            }
+        }
+
+        [Test]
+        public void InstallLargeCannon_InstallInWidow_SetsWeaponInCorrectSlot()
+        {
+            using (var mock = AutoMock.GetLoose())
+            {
+                //Arrange
+
+                var param = new NamedParameter[2] {
+                    new NamedParameter("weapons", Weapons.Cannon),
+                    new NamedParameter("weaponGrades", WeaponGrades.Large)
+                };
+
+                var ship = _Factory.CreateShip(Battleships.Widow);
+                var weapon = mock.Create<Weapon>(param);
+
+
+                //Act
+                ship.InstallWeapon(weapon, 3);
+
+                //weapon.VerifyAll();
+
+                //Assert
+                Assert.Contains(weapon, ship.Weapons);
+                Assert.IsTrue(weapon.Equals(ship.Weapons[2]));
+            }
+        }
+
+        [Test]
+        public void InstallLargeCannon_InstallInRokh_SetsWeaponInCorrectSlot()
+        {
+            using (var mock = AutoMock.GetLoose())
+            {
+                //Arrange
+
+                var param = new NamedParameter[2] {
+                    new NamedParameter("weapons", Weapons.Cannon),
+                    new NamedParameter("weaponGrades", WeaponGrades.Large)
+                };
+
+                var ship = _Factory.CreateShip(Battleships.Rokh);
+                var weapon = mock.Create<Weapon>(param);
+
+                //Act
+                ship.InstallWeapon(weapon, 3);
+
+                //weapon.VerifyAll();
+
+                //Assert
+                Assert.Contains(weapon, ship.Weapons);
+                Assert.IsTrue(weapon.Equals(ship.Weapons[2]));
+            }
+        }
+
+        [Test]
+        public void InstallLargeCannon_InstallInAnyShip_SetsWeaponInIncorrectSlot()
+        {
+            using (var mock = AutoMock.GetLoose())
+            {
+                //Arrange
+
+                var param = new NamedParameter[2] {
+                    new NamedParameter("weapons", Weapons.Cannon),
+                    new NamedParameter("weaponGrades", WeaponGrades.Large)
+                };
+
+                var ship = _Factory.CreateShip(Battleships.Dominix);
+                var weapon = mock.Create<Weapon>(param);
+
+
+                //Act
+
+
+                //weapon.VerifyAll();
+
+                //Assert
+                Assert.Catch<ArgumentOutOfRangeException>(() => ship.InstallWeapon(weapon, -1));
+            }
+        }
+
+        [Test]
+        public void InstallMediumCannon_InstallInAnyShip_SetsWeaponInCorrectSlot()
+        {
+            using (var mock = AutoMock.GetLoose())
+            {
+                //Arrange
+
+                var param = new NamedParameter[2] {
+                    new NamedParameter("weapons", Weapons.Cannon),
+                    new NamedParameter("weaponGrades", WeaponGrades.Medium)
+                };
+
+                var ship = _Factory.CreateShip(Battleships.Dominix);
+                var weapon = mock.Create<Weapon>(param);
+
+                //Act
+
+
+                //weapon.VerifyAll();
+
+                //Assert
+                Assert.Catch<InvalidOperationException>(() => ship.InstallWeapon(weapon, 3));
+            }
+        }
+
+        [Test]
+        public void InstallSmallCannon_InstallInAnyShip_SetsWeaponInIncorrectSlot()
+        {
+            using (var mock = AutoMock.GetLoose())
+            {
+                //Arrange
+
+                var param = new NamedParameter[2] {
+                    new NamedParameter("weapons", Weapons.Cannon),
+                    new NamedParameter("weaponGrades", WeaponGrades.Small)
+                };
+
+                var ship = _Factory.CreateShip(Battleships.Dominix);
+                var weapon = mock.Create<Weapon>(param);
+
+
+                //Act
+
+
+                //weapon.VerifyAll();
+
+                //Assert
+                Assert.Catch<ArgumentOutOfRangeException>(() => ship.InstallWeapon(weapon, -1));
+                Assert.Catch<InvalidOperationException>(() => ship.InstallWeapon(weapon, 3));
+            }
+        }
+
+        [Test]
+        public void RemoveWeapon_RemoveFromCorrectSlots_SuccessfullyRemoved()
+        {
+            using (var mock = AutoMock.GetLoose())
+            {
+                //Arrange
+
+                var param = new NamedParameter[2] {
+                    new NamedParameter("weapons", Weapons.Cannon),
+                    new NamedParameter("weaponGrades", WeaponGrades.Large)
+                };
+
+                var ship = _Factory.CreateShip(Battleships.Dominix);
+                var weapon = mock.Create<Weapon>(param);
+
+                ship.InstallWeapon(weapon, 3);
+
+                //Act
+
+                ship.RemoveWeapon(3);
+
+                //weapon.VerifyAll();
+
+                //Assert
+                Assert.IsNull(ship.Weapons[2]);
+            }
+        }
+
+        [Test]
+        public void RemoveWeapon_RemoveFromIncorrectSlots_ThrowsException()
+        {
+            using (var mock = AutoMock.GetLoose())
+            {
+                //Arrange
+
+                var param = new NamedParameter[2] {
+                    new NamedParameter("weapons", Weapons.Cannon),
+                    new NamedParameter("weaponGrades", WeaponGrades.Large)
+                };
+
+                var ship = _Factory.CreateShip(Battleships.Dominix);
+                var weapon = mock.Create<Weapon>(param);
+
+                ship.InstallWeapon(weapon, 3);
+
+                //Act
+
+
+
+                //weapon.VerifyAll();
+
+                //Assert
+                Assert.Catch<ArgumentOutOfRangeException>(() => ship.RemoveWeapon(-1));
+            }
+        }
+
+        [Test]
+        public void RemoveDefenseModule_RemoveFromCorrectSlots_SuccessfullyRemoved()
+        {
+            using (var mock = AutoMock.GetLoose())
+            {
+                //Arrange
+
+                var param = new NamedParameter[2] {
+                    new NamedParameter("defensiveModules", DefenseModules.ShieldAmplifier),
+                    new NamedParameter("defensiveWeaponGrades", DefenseModuleGrades.Large)
+                };
+
+                var ship = _Factory.CreateShip(Battleships.Dominix);
+                var defenseModule = mock.Create<DefenseModule>(param);
+
+                ship.InstallDefensiveModule(defenseModule, 3);
+
+                //Act
+
+                ship.RemoveDefenseModule(3);
+
+                //weapon.VerifyAll();
+
+                //Assert
+                Assert.IsNull(ship.DefenseModules[2]);
+            }
+        }
+
+        [Test]
+        public void RemoveDefenseModule_RemoveFromIncorrectSlots_SuccessfullyRemoved()
+        {
+            using (var mock = AutoMock.GetLoose())
+            {
+                //Arrange
+
+                var param = new NamedParameter[2] {
+                    new NamedParameter("defensiveModules", DefenseModules.ShieldAmplifier),
+                    new NamedParameter("defensiveWeaponGrades", DefenseModuleGrades.Large)
+                };
+
+                var ship = _Factory.CreateShip(Battleships.Dominix);
+                var defenseModule = mock.Create<DefenseModule>(param);
+
+                ship.InstallDefensiveModule(defenseModule, 3);
+
+                //Act
+
+
+
+                //weapon.VerifyAll();
+
+                //Assert
+                Assert.Catch<ArgumentOutOfRangeException>(() => ship.RemoveDefenseModule(-1));
+            }
+        }
+
+        [Test]
+        public void InstallDefensiveModule_InstallShieldAmplifierDefensiveModuleInDominix_SetsDefensiveModuleInCorrectSlot()
+        {
+            using (var mock = AutoMock.GetLoose())
+            {
+                //Arrange
+
+                var param = new NamedParameter[2] {
+                    new NamedParameter("defensiveModules", DefenseModules.ShieldAmplifier),
+                    new NamedParameter("defensiveWeaponGrades", DefenseModuleGrades.Large)
+                };
+
+                var ship = _Factory.CreateShip(Battleships.Dominix);
+                var defenseModule = mock.Create<DefenseModule>(param);
+
+                //Act
+
+                ship.InstallDefensiveModule(defenseModule, 3);
+
+                //weapon.VerifyAll();
+
+                //Assert
+                Assert.Contains(defenseModule, ship.DefenseModules);
+                Assert.AreEqual(defenseModule, ship.DefenseModules[2]);
+            }
+        }
+
+        [Test]
+        public void InstallDefensiveModule_InstallHullPlateDefensiveModuleInDominix_SetsDefensiveModuleInCorrectSlot()
+        {
+            using (var mock = AutoMock.GetLoose())
+            {
+                //Arrange
+
+                var param = new NamedParameter[2] {
+                    new NamedParameter("defensiveModules", DefenseModules.HullPlate),
+                    new NamedParameter("defensiveWeaponGrades", DefenseModuleGrades.Large)
+                };
+
+                var ship = _Factory.CreateShip(Battleships.Dominix);
+                var defenseModule = mock.Create<DefenseModule>(param);
+
+                //Act
+
+                ship.InstallDefensiveModule(defenseModule, 3);
+
+                //weapon.VerifyAll();
+
+                //Assert
+                Assert.Contains(defenseModule, ship.DefenseModules);
+                Assert.AreEqual(defenseModule, ship.DefenseModules[2]);
+            }
+        }
+
+        [Test]
+        public void InstallDefensiveModule_InstallArmorPlateDefensiveModuleInDominix_SetsDefensiveModuleInCorrectSlot()
+        {
+            using (var mock = AutoMock.GetLoose())
+            {
+                //Arrange
+
+                var param = new NamedParameter[2] {
+                    new NamedParameter("defensiveModules", DefenseModules.ArmorPlate),
+                    new NamedParameter("defensiveWeaponGrades", DefenseModuleGrades.Large)
+                };
+
+                var ship = _Factory.CreateShip(Battleships.Dominix);
+                var defenseModule = mock.Create<DefenseModule>(param);
+
+                //Act
+
+                ship.InstallDefensiveModule(defenseModule, 3);
+
+                //weapon.VerifyAll();
+
+                //Assert
+                Assert.Contains(defenseModule, ship.DefenseModules);
+                Assert.AreEqual(defenseModule, ship.DefenseModules[2]);
+            }
+        }
+
+        [Test]
+        public void InstallDefensiveModule_InstallShieldAmplifierDefensiveModuleInDominix_SetsDefensiveModuleInIncorrectSlot()
+        {
+            using (var mock = AutoMock.GetLoose())
+            {
+                //Arrange
+
+                var param = new NamedParameter[2] {
+                    new NamedParameter("defensiveModules", DefenseModules.ShieldAmplifier),
+                    new NamedParameter("defensiveWeaponGrades", DefenseModuleGrades.Large)
+                };
+
+                var ship = _Factory.CreateShip(Battleships.Dominix);
+                var defenseModule = mock.Create<DefenseModule>(param);
+
+                //Act
+
+
+
+                //weapon.VerifyAll();
+
+                //Assert
+                Assert.Catch<ArgumentOutOfRangeException>(() => ship.InstallDefensiveModule(defenseModule, -1));
             }
         }
     }

@@ -1,4 +1,4 @@
-﻿namespace ShipTests.BattleshipTests
+﻿namespace ShipTests
 {
 	public enum AltuFaltuShip
 	{
