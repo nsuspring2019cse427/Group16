@@ -9,14 +9,15 @@ namespace ShipTests.BattleCruiserTests
 	   : ShipTestBase<BattleCruiser>
 	{
 
-		[SetUp]
-		public void Setup()
-		    => SetupShipFactory();
-
+        [SetUp]
+        public void Setup()
+        { 
+		    SetupShipFactory();
+        }
 		[Test]
 		public void CreateBattleCruiser_CreateFerox_ReturnsCorrectInstance()
 		{
-			//Arrange	
+            //Arrange	
 			var type = BattleCruisers.Ferox;
 			//Act
 			var ship = _Factory.CreateShip(type);

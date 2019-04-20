@@ -8,7 +8,11 @@ namespace DeathStar.Core.Models.Battles
 		public Ship SelectedShip { get; private set; }
 		public uint ShipAmount { get; private set; }
 
-		public FormationRow(Ship selectedShip, uint shipAmount) 
-			=> throw new NotImplementedException();
+		public FormationRow(Ship selectedShip, uint shipAmount)
+        //=> throw new NotImplementedException();
+        {
+            SelectedShip = selectedShip;
+            ShipAmount = shipAmount;
+        }
 	}
 }
