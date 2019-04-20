@@ -688,23 +688,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mizan\\.nuget\\packages\\": {},
+    "C:\\Users\\Sayed\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\DEV\\ProjectDeathStar\\ProjectDeathStar.Core\\ProjectDeathStar.Core.csproj",
+      "projectUniqueName": "D:\\NSU\\spring 19\\cse427\\project\\Group16\\Project1\\Code\\ProjectDeathStar.Core\\ProjectDeathStar.Core.csproj",
       "projectName": "ProjectDeathStar.Core",
-      "projectPath": "H:\\DEV\\ProjectDeathStar\\ProjectDeathStar.Core\\ProjectDeathStar.Core.csproj",
-      "packagesPath": "C:\\Users\\mizan\\.nuget\\packages\\",
-      "outputPath": "H:\\DEV\\ProjectDeathStar\\ProjectDeathStar.Core\\obj\\",
+      "projectPath": "D:\\NSU\\spring 19\\cse427\\project\\Group16\\Project1\\Code\\ProjectDeathStar.Core\\ProjectDeathStar.Core.csproj",
+      "packagesPath": "C:\\Users\\Sayed\\.nuget\\packages\\",
+      "outputPath": "D:\\NSU\\spring 19\\cse427\\project\\Group16\\Project1\\Code\\ProjectDeathStar.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\mizan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sayed\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

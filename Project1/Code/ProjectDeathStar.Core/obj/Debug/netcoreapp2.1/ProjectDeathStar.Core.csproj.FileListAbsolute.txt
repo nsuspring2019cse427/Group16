@@ -25,3 +25,30 @@ H:\DEV\ProjectDeathStar\ProjectDeathStar.Core\obj\Debug\netcoreapp2.1\ProjectDea
 H:\DEV\ProjectDeathStar\ProjectDeathStar.Core\bin\Debug\netcoreapp2.1\ProjectDeathStar.Core.deps.json
 H:\DEV\ProjectDeathStar\ProjectDeathStar.Core\bin\Debug\netcoreapp2.1\ProjectDeathStar.Core.dll
 H:\DEV\ProjectDeathStar\ProjectDeathStar.Core\bin\Debug\netcoreapp2.1\ProjectDeathStar.Core.pdb
+C:\Users\Sayed\Downloads\DeathStar30.3.19\DeathStar\DeathStar.Core\bin\Debug\netcoreapp2.1\ProjectDeathStar.Core.deps.json
+C:\Users\Sayed\Downloads\DeathStar30.3.19\DeathStar\DeathStar.Core\bin\Debug\netcoreapp2.1\ProjectDeathStar.Core.dll
+C:\Users\Sayed\Downloads\DeathStar30.3.19\DeathStar\DeathStar.Core\bin\Debug\netcoreapp2.1\ProjectDeathStar.Core.pdb
+C:\Users\Sayed\Downloads\DeathStar30.3.19\DeathStar\DeathStar.Core\obj\Debug\netcoreapp2.1\ProjectDeathStar.Core.csprojAssemblyReference.cache
+C:\Users\Sayed\Downloads\DeathStar30.3.19\DeathStar\DeathStar.Core\obj\Debug\netcoreapp2.1\ProjectDeathStar.Core.csproj.CoreCompileInputs.cache
+C:\Users\Sayed\Downloads\DeathStar30.3.19\DeathStar\DeathStar.Core\obj\Debug\netcoreapp2.1\ProjectDeathStar.Core.AssemblyInfoInputs.cache
+C:\Users\Sayed\Downloads\DeathStar30.3.19\DeathStar\DeathStar.Core\obj\Debug\netcoreapp2.1\ProjectDeathStar.Core.AssemblyInfo.cs
+C:\Users\Sayed\Downloads\DeathStar30.3.19\DeathStar\DeathStar.Core\obj\Debug\netcoreapp2.1\ProjectDeathStar.Core.dll
+C:\Users\Sayed\Downloads\DeathStar30.3.19\DeathStar\DeathStar.Core\obj\Debug\netcoreapp2.1\ProjectDeathStar.Core.pdb
+C:\Users\Sayed\Downloads\New folder\DeathStar\ProjectDeathStar.Core\bin\Debug\netcoreapp2.1\ProjectDeathStar.Core.deps.json
+C:\Users\Sayed\Downloads\New folder\DeathStar\ProjectDeathStar.Core\bin\Debug\netcoreapp2.1\ProjectDeathStar.Core.dll
+C:\Users\Sayed\Downloads\New folder\DeathStar\ProjectDeathStar.Core\bin\Debug\netcoreapp2.1\ProjectDeathStar.Core.pdb
+C:\Users\Sayed\Downloads\New folder\DeathStar\ProjectDeathStar.Core\obj\Debug\netcoreapp2.1\ProjectDeathStar.Core.csprojAssemblyReference.cache
+C:\Users\Sayed\Downloads\New folder\DeathStar\ProjectDeathStar.Core\obj\Debug\netcoreapp2.1\ProjectDeathStar.Core.csproj.CoreCompileInputs.cache
+C:\Users\Sayed\Downloads\New folder\DeathStar\ProjectDeathStar.Core\obj\Debug\netcoreapp2.1\ProjectDeathStar.Core.AssemblyInfoInputs.cache
+C:\Users\Sayed\Downloads\New folder\DeathStar\ProjectDeathStar.Core\obj\Debug\netcoreapp2.1\ProjectDeathStar.Core.AssemblyInfo.cs
+C:\Users\Sayed\Downloads\New folder\DeathStar\ProjectDeathStar.Core\obj\Debug\netcoreapp2.1\ProjectDeathStar.Core.dll
+C:\Users\Sayed\Downloads\New folder\DeathStar\ProjectDeathStar.Core\obj\Debug\netcoreapp2.1\ProjectDeathStar.Core.pdb
+D:\NSU\spring 19\cse427\project\Group16\Project1\Code\ProjectDeathStar.Core\bin\Debug\netcoreapp2.1\ProjectDeathStar.Core.deps.json
+D:\NSU\spring 19\cse427\project\Group16\Project1\Code\ProjectDeathStar.Core\bin\Debug\netcoreapp2.1\ProjectDeathStar.Core.dll
+D:\NSU\spring 19\cse427\project\Group16\Project1\Code\ProjectDeathStar.Core\bin\Debug\netcoreapp2.1\ProjectDeathStar.Core.pdb
+D:\NSU\spring 19\cse427\project\Group16\Project1\Code\ProjectDeathStar.Core\obj\Debug\netcoreapp2.1\ProjectDeathStar.Core.csprojAssemblyReference.cache
+D:\NSU\spring 19\cse427\project\Group16\Project1\Code\ProjectDeathStar.Core\obj\Debug\netcoreapp2.1\ProjectDeathStar.Core.csproj.CoreCompileInputs.cache
+D:\NSU\spring 19\cse427\project\Group16\Project1\Code\ProjectDeathStar.Core\obj\Debug\netcoreapp2.1\ProjectDeathStar.Core.AssemblyInfoInputs.cache
+D:\NSU\spring 19\cse427\project\Group16\Project1\Code\ProjectDeathStar.Core\obj\Debug\netcoreapp2.1\ProjectDeathStar.Core.AssemblyInfo.cs
+D:\NSU\spring 19\cse427\project\Group16\Project1\Code\ProjectDeathStar.Core\obj\Debug\netcoreapp2.1\ProjectDeathStar.Core.dll
+D:\NSU\spring 19\cse427\project\Group16\Project1\Code\ProjectDeathStar.Core\obj\Debug\netcoreapp2.1\ProjectDeathStar.Core.pdb

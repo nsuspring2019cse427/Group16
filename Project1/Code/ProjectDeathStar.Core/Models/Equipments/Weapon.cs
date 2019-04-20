@@ -1,20 +1,22 @@
-﻿namespace DeathStar.Core.Models.Equipments
-{
-	public class Weapon
-	{
-		public string Name { get; private set; }
-		public uint KineticDamage { get; private set; }
-		public uint ThermalDamage { get; private set; }
-		public uint ExplosiveDamage { get; private set; }
-		public uint ElectromagneticDamage { get; private set; }
+﻿using System;
 
-		public WeaponGrades Grade { get; private set; }
+namespace DeathStar.Core.Models.Equipments
+{
+	public class Weapon 
+	{
+		public virtual string Name { get; private set; }
+		public virtual uint KineticDamage { get; private set; }
+		public virtual uint ThermalDamage { get; private set; }
+		public virtual uint ExplosiveDamage { get; private set; }
+		public virtual uint ElectromagneticDamage { get; private set; }
+
+		public virtual WeaponGrades Grade { get; private set; }
 
 		public Weapon(Weapons weapons, WeaponGrades weaponGrades)
 		{
 			Name = weapons.ToString();
-
 			Grade = weaponGrades;
+
 			switch (weapons)
 			{
 				case Weapons.Cannon:
@@ -166,6 +168,5 @@
 					break;
 			}
 		}
-
 	}
 }
