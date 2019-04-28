@@ -52,7 +52,16 @@ namespace DeathStar.Core.Models.Planets
             }
             Formations = new List<BattleFormation>();
         }
+        /* isp ActivateFormation()
 
+        Input variables: 
+           battleFormation =
+           battleFormationType = 
+
+        State variables:
+
+
+       */
         public void ActivateFormation(BattleFormation battleFormation, BattleFormationType battleFormationType)
         {
             if (battleFormation is null)
@@ -78,7 +87,15 @@ namespace DeathStar.Core.Models.Planets
             }
 
         }
+        /* isp AddFormation()
 
+        Input variables: 
+           battleFormation =
+
+        State variables:
+
+
+       */
 
         public void AddFormation(BattleFormation battleFormation)
         {
@@ -86,7 +103,15 @@ namespace DeathStar.Core.Models.Planets
                 throw new ArgumentNullException(nameof(BattleFormation));
             Formations?.Add(battleFormation);
         }
+        /* isp RemoveFormation()
 
+        Input variables: 
+           battleFormation =
+
+        State variables:
+
+
+       */
         public void RemoveFormation(BattleFormation battleFormation)
         {
             if (battleFormation is null)
@@ -98,15 +123,32 @@ namespace DeathStar.Core.Models.Planets
             
             Formations.Remove(battleFormation);
         }
+        /* isp ExistsFormation()
 
+        Input variables: 
+           battleFormation =
+
+        State variables:
+
+
+       */
         public bool ExistsFormation(BattleFormation battleFormation)
         {
             if (battleFormation is null)
                 throw new ArgumentNullException(nameof(BattleFormation));
             return Formations?.SingleOrDefault(f => f.Equals(battleFormation)) != null;
         }
-        
 
+        /* isp UpdateFormation()
+
+        Input variables: 
+           battleFormation =
+           newFormation = 
+
+        State variables:
+
+
+       */
         public void UpdateFormation(BattleFormation battleFormation, BattleFormation newFormation)
         {
             if (battleFormation is null)

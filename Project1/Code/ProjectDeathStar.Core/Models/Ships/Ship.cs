@@ -32,7 +32,20 @@ namespace DeathStar.Core.Models.Ships
 
 		}
 
-		public void InstallDefensiveModule(DefenseModule defenseModule, uint slot)
+        /* isp InstallDefensiveModule()
+         
+         Input variables: 
+            defenseModule:
+                defenseModule.Size = 
+                defenseModule.name = 
+            slot =
+
+         State variables:
+            DefenseModules [slot -1] = null, defenseModule 
+            
+        */
+
+        public void InstallDefensiveModule(DefenseModule defenseModule, uint slot)
 		{
 			if (slot >= DefenseModules.Length)
 				throw new ArgumentOutOfRangeException(nameof(slot), "Invalid slot.");
@@ -93,7 +106,7 @@ namespace DeathStar.Core.Models.Ships
 					throw new InvalidOperationException($"Can not install a doomsday '{defenseModule.Name}' defensive module in '{Name}' ship");
 			}
 			else
-				throw new InvalidOperationException("Unknown ship");
+				throw new InvalidOperationException("Invlid ship");
 
 		}
 
@@ -102,7 +115,20 @@ namespace DeathStar.Core.Models.Ships
 
 		}
 
-		public void InstallWeapon(Weapon weapon, int slot)
+        /* isp InstallWeapon()
+         
+         Input variables: 
+            weapon: 
+                weapon.name = 
+                weapon.grade = 
+            slot = 
+
+         State variables:
+            Weapons[slot - 1] = null, weapon
+            
+        */
+
+        public void InstallWeapon(Weapon weapon, int slot)
 		{
 
 			if (slot < 0 || slot >= Weapons.Length)
@@ -167,9 +193,17 @@ namespace DeathStar.Core.Models.Ships
 				throw new InvalidOperationException("Unknown ship");
 
 		}
+        /* isp RemoveWeapon()
 
+        Input variables: 
+           slot = 
 
-		public void RemoveWeapon(uint slot)
+        State variables:
+           Weapons[slot - 1] = null, !null
+
+       */
+
+        public void RemoveWeapon(uint slot)
 		{
 			if (slot >= Weapons.Length)
 				throw new ArgumentOutOfRangeException(nameof(slot));
@@ -177,7 +211,17 @@ namespace DeathStar.Core.Models.Ships
 
 		}
 
-		public void RemoveEngineeringModule(uint slot)
+        /* isp RemoveEngineeringModule()
+
+        Input variables: 
+           slot = 
+
+        State variables:
+            
+
+       */
+
+        public void RemoveEngineeringModule(uint slot)
 		{
 			if (slot >= EngineeringModules.Length)
 				throw new ArgumentOutOfRangeException(nameof(slot));
@@ -185,7 +229,17 @@ namespace DeathStar.Core.Models.Ships
 
 		}
 
-		public void RemoveDefenseModule(uint slot)
+        /* isp RemoveDefenseModule()
+
+        Input variables: 
+           slot =
+
+        State variables:
+           
+
+       */
+
+        public void RemoveDefenseModule(uint slot)
 		{
 			if (slot >= DefenseModules.Length)
 				throw new ArgumentOutOfRangeException(nameof(slot), "Invalid slot.");

@@ -132,6 +132,15 @@ namespace DeathStar.Core.Models.Battles
             GeneralInCharge = general;
         }
 
+        /* isp 
+         
+         Input variables: 
+            isActive = true, false
+
+         State variables:
+            IsActive = true, false
+            
+        */
         public void SetFormationType(bool isActive = false)
             => IsActive = isActive;
     }
